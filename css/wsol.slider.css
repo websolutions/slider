@@ -1,0 +1,19 @@
+/* Swipe Slider
+   -------------------------------------------------- */
+
+.slider {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+
+.slider-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+  .slider-wrap > * {
+    float: left;
+    width: 100%;
+    position: relative;
+  }

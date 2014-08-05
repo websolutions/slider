@@ -1,0 +1,20 @@
+{
+  "name": "wsol-slider",
+  "version": "1.0.0",
+  "homepage": "https://github.com/websolutions/slider",
+  "authors": [
+    "Maxwell Barvian <max@barvian.me>"
+  ],
+  "description": "A jQuery slider built around @thebird's Swipe plugin.",
+  "main": [
+    "css/wsol.slider.css",
+    "js/wsol.slider.js"
+  ],
+  "ignore": [
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": ">= 1.7.2",
+    "swipe": "thebird/Swipe"
+  }
+}
