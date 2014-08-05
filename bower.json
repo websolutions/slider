@@ -15,6 +15,6 @@
   ],
   "dependencies": {
     "jquery": ">= 1.7.2",
-    "swipe": "thebird/Swipe"
+    "swipe": "thebird/Swipe#32c19c95ea"
   }
 }
