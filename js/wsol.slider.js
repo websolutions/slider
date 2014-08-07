@@ -1,5 +1,5 @@
 /**
- * wsol.slider.js 1.0.0
+ * wsol.slider.js 1.1.0
  * http://github.com/websolutions/slider
  */
 
@@ -24,7 +24,7 @@
     disabledArrowClass: 'disabled',
     paginated: false,
     paginationClass: "slider-pagination",
-    customPage: function(slider, index) {
+    customPage: function(slider, index, slide) {
       return '<button type="button">' + (index + 1) + '</button>';
     },
     currentPageClass: 'current'
@@ -75,7 +75,7 @@
   Slider.prototype.buildPagination = function() {
     var paginationString = '<ol class="' + this.settings.paginationClass + '">';
     for (var i = 0, l = this.swipe.getNumSlides(); i < l; i++) {
-      paginationString += '<li>' + this.settings.customPage.call(this, this, i) + '</li>';
+      paginationString += '<li>' + this.settings.customPage.call(this, this, i, this.swipe.getSlide(i)) + '</li>';
     }
     paginationString += '</ol>';
 

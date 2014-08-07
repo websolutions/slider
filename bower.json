@@ -1,6 +1,6 @@
 {
   "name": "wsol-slider",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "homepage": "https://github.com/websolutions/slider",
   "authors": [
     "Maxwell Barvian <max@barvian.me>"
@@ -15,6 +15,6 @@
   ],
   "dependencies": {
     "jquery": ">= 1.7.2",
-    "swipe": "thebird/Swipe#32c19c95ea"
+    "swipe": "websolutions/Swipe#~2.1.0"
   }
 }
