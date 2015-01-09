@@ -19,7 +19,7 @@
     base.init = function() {
       base.options = $.extend({}, $.wsol.slider.defaultOptions, options);
 
-      base.swipe = new Swipe(base.el, $.extend({}, base.options.swipe, {
+      base.swipe = new Swipe(base.el, $.extend({}, base.options, {
         callback: base._slideHandler,
         transitionEnd: base.options.transitionEnd ? base.options.transitionEnd.bind(base, base) : null
       }));
@@ -55,7 +55,7 @@
       var current = base.swipe.getPos(),
           length = base.swipe.getNumSlides();
 
-      if (!base.options.swipe.continuous) {
+      if (!base.options.continuous) {
         if (0 < current) {
           base.$prevArrow.removeClass(base.options.disabledArrowClass);
           if (base.$prevArrow.is("input") || base.$prevArrow.is("button")) base.$prevArrow.removeAttr("disabled");
@@ -162,14 +162,17 @@
   };
 
   $.wsol.slider.defaultOptions = {
-    swipe: {
-      startSlide: 0,
-      speed: 300,
-      auto: 0,
-      continuous: true,
-      disableScroll: false,
-      stopPropagation: false
-    },
+    // Swipe config
+    startSlide: 0,
+    speed: 300,
+    auto: 0,
+    continuous: true,
+    disableScroll: false,
+    stopPropagation: false,
+    callback: null,
+    transitionEnd: null,
+
+    // Custom config
     arrows: true,
     prevArrow: '<button type="button" class="slider-prev">Previous</button>',
     nextArrow: '<button type="button" class="slider-next">Next</button>',
@@ -180,8 +183,6 @@
       return '<button type="button">' + (index + 1) + '</button>';
     },
     currentPageClass: 'current',
-    callback: null,
-    transitionEnd: null
   };
 
   $.fn.wsol_slider = function(options) {
