@@ -40,7 +40,6 @@ In addition to Swipe's [options](https://github.com/thebird/Swipe#config-options
 
 Option                      | Type     | Description                                                          | Default
 ----------------------------|----------|----------------------------------------------------------------------|--------
-`swipe`                     | Object   | Configuration options for the underlying Swipe plugin                |
 `arrows`                    | Boolean  | If the slider should use previous/next arrows                        | `true`
 `prevArrow`                 | String   | Markup for the previous arrow                                        | `<button type="button" class="slider-prev">Previous</button>`
 `nextArrow    `             | String   | Markup for the next arrow                                            | `<button type="button" class="slider-next">Next</button>`
@@ -49,5 +48,3 @@ Option                      | Type     | Description                            
 `paginationClass`           | String   | Class name to apply to the pagination container                      | `slider-pagination`
 `customPage`                | Function | Function to build pagination items                                   |
 `currentPageClass`          | String   | Class name to apply to the current pagination item                   | `current`
-`callback`                  | Function | Called when the slide changes                                        |
-`transitionEnd`             | Function | Called when the transition for the current slide change ends         |
