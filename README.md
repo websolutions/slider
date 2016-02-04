@@ -1,3 +1,6 @@
+# DEPRICATED
+## Use https://github.com/kenwheeler/slick/ instead.
+
 # Slider
 
 A jQuery slider built around Brad Birdsall's [Swipe plugin](https://github.com/thebird/Swipe).
